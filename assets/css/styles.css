@@ -149,8 +149,8 @@ footer {
     grid-area: card-title;
 }
 
-.card-title:hover,
-.card-title:focus-visible {
+.card-title>a:hover,
+.card-title>a:focus {
     color: var(--yellow);
 }
 
