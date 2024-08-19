@@ -77,7 +77,9 @@ a {
     grid-template-rows: repeat(3, auto-fit);
     grid-template-areas: "header" "main" "footer";
     justify-items: center;
-    padding-top: 219px;
+    /* padding-top: 219px; */
+    margin: 219px auto;
+    gap: 24px;
 }
 
 header {
