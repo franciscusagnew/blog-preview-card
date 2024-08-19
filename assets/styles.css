@@ -1,0 +1,164 @@
+/* * Mobile: 375px x 812px
+ * Desktop: 1440px x 960px */
+/* * Font Family: [Figtree]
+ * Weights: */
+:root {
+    /* body background color */
+    --yellow: hsl(47, 88%, 63%);
+
+    /* card background color */
+    --white: hsl(0, 0%, 100%);
+
+    /* Gray */
+    --gray-950: hsl(0, 0%, 7%);
+    --gray-500: hsl(0, 0%, 42%);
+    --figtree: "Figtree";
+}
+
+.figtree-1 {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 150%, ;
+}
+
+body {
+    font-family: var(--figtree);
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    letter-spacing: 0px;
+    background-color: var(--yellow);
+}
+
+.preset-1 {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 800;
+}
+
+.preset-2 {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.preset-3 {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.preset-3-bold {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(216, 100%, 61%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    justify-content: center;
+    padding-top: 219px;
+}
+
+header {
+    text-align: center;
+    visibility: hidden;
+}
+
+.card {
+    background-color: var(--white);
+    width: 384px;
+    height: 522px;
+    padding: 24px 24px 24px 24px;
+    border-radius: 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-areas:
+        "card-image"
+        "card-content"
+        "card-footer";
+}
+
+.card-image {
+    grid-area: card-image;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.card-content {
+    grid-area: card-content;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, auto-fit);
+    grid-template-areas:
+        "category"
+        "publish-date"
+        "card-title"
+        "card-description";
+    gap: 12px;
+    display: grid;
+}
+
+.card-category {
+    grid-area: category;
+    margin: 0px;
+    width: 82px;
+    height: 29px;
+    padding: 4px 12px;
+    text-align: center;
+    background-color: var(--yellow);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publish-date {
+    grid-area: publish-date;
+}
+
+.card-title {
+    grid-area: card-title;
+}
+
+.card-description {
+    grid-area: card-body;
+    width: 336px;
+}
+
+.card-footer {
+    grid-area: card-footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 32px 1fr;
+    grid-template-areas: "avatar-image avatar-name";
+    gap: 12px;
+    align-items: center;
+}
+
+.author-image {
+    grid-area: avatar-image;
+    width: 32px;
+    height: 32px;
+}
+
+.author-name {
+    grid-area: avatar-name;
+}
