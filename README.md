@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![My Blog Preview Card Component Solution](./screenshot.jpg)
+![My Blog Preview Card Component Solution](./assets/images/Blog%20preview%20card.png)
 
 ### Links
 
