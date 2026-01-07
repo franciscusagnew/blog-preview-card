@@ -2,6 +2,8 @@
  * Desktop: 1440px x 960px */
 /* * Font Family: [Figtree]
  * Weights: */
+
+/* Base */
 :root {
     /* body background color */
     --yellow: hsl(47, 88%, 63%);
@@ -32,6 +34,25 @@ body {
     background-color: var(--yellow);
 }
 
+a {
+    text-decoration: none;
+    color: var(--gray-950);
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    visibility: hidden;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
 .preset-1 {
     font-size: 24px;
     line-height: 150%;
@@ -56,11 +77,6 @@ body {
     font-weight: 800;
 }
 
-a {
-    text-decoration: none;
-    color: var(--gray-950);
-}
-
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -71,6 +87,7 @@ a {
     color: hsl(228, 45%, 44%);
 }
 
+/* Layout */
 .grid {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -80,20 +97,6 @@ a {
     padding-top: 195px;
     margin: 0 auto;
     gap: 24px;
-}
-
-header {
-    grid-area: header;
-    text-align: center;
-    visibility: hidden;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
 }
 
 .card {
@@ -110,13 +113,13 @@ footer {
         "card-footer";
 }
 
-.card-image {
+.card__image {
     grid-area: card-image;
     border-radius: 20px;
     width: 100%;
 }
 
-.card-content {
+.card__content {
     grid-area: card-content;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto-fit);
@@ -129,7 +132,7 @@ footer {
     display: grid;
 }
 
-.category {
+.card__category {
     grid-area: category;
     margin: 0px;
     width: 82px;
@@ -143,25 +146,25 @@ footer {
     justify-content: center;
 }
 
-.publish-date {
+.card__publishDate {
     grid-area: publish-date;
 }
 
-.card-title {
+.card__title {
     grid-area: card-title;
 }
 
-.card-title>a:hover,
-.card-title>a:focus {
+.card__title>a:hover,
+.card__title>a:focus {
     color: var(--yellow);
 }
 
-.card-description {
+.card__description {
     grid-area: card-description;
     width: 336px;
 }
 
-.card-footer {
+.card__footer {
     grid-area: card-footer;
     display: grid;
     grid-template-columns: 1fr;
@@ -171,12 +174,12 @@ footer {
     align-items: center;
 }
 
-.author-image {
+.card__authorImage {
     grid-area: avatar-image;
     width: 32px;
     height: 32px;
 }
 
-.author-name {
+.card__author {
     grid-area: avatar-name;
 }
